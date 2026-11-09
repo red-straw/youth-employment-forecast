@@ -1,4 +1,4 @@
-"""Step 2. 결측치 제거 + 표준화(StandardScaler) → data/standardized_dataset.csv"""
+"""Step 2. 결측치 제거 + 표준화(StandardScaler) -> data/standardized_dataset.csv"""
 from sklearn.preprocessing import StandardScaler
 
 from common import STANDARDIZED_DATASET, load_dataset

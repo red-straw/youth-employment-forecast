@@ -1,4 +1,4 @@
-"""분기별 실질 GDP(data/raw/gdp_year.csv)를 월별로 보간 → data/raw/gdp.csv
+"""분기별 실질 GDP(data/raw/gdp_year.csv)를 월별로 보간 -> data/raw/gdp.csv
 분기 시작월에 값을 두고 시간 기준 선형 보간, 마지막 분기 이후는 직전 값 유지."""
 import sys
 from pathlib import Path
@@ -12,7 +12,7 @@ END_DATE = "2025-09-01"
 
 
 def quarter_to_date(text):
-    """'2010/1/4' 또는 '2010.1/4' 형식 → 해당 분기 첫 달."""
+    """'2010/1/4' 또는 '2010.1/4' 형식 -> 해당 분기 첫 달."""
     text = str(text).replace("/4", "")
     year, q = text.replace("/", ".").split(".")
     return pd.Timestamp(year=int(year), month=(int(q) - 1) * 3 + 1, day=1)

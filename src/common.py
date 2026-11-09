@@ -1,4 +1,4 @@
-"""공통 경로·데이터 로더."""
+"""공통 경로/데이터 로더."""
 from pathlib import Path
 
 import pandas as pd
