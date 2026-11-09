@@ -57,11 +57,11 @@ GDP·환율·금리·기업/소비자 심리가 높을수록 청년 고용률이
 ```text
 .
 ├── data/
-│   ├── raw/                  # 지표별 원본 데이터 (UTF-8)
+│   ├── raw/                  # 지표별 원본 데이터 (UTF-8, KOSPI는 월평균 가공값)
 │   └── final_dataset.csv     # 월별 통합 데이터셋
 ├── src/
 │   ├── collect/
-│   │   ├── kospi.py          # KOSPI 일별 시세 크롤링 → 월평균
+│   │   ├── kospi.py          # KOSPI 일별 시세 수집(학습 목적) → 월평균
 │   │   └── gdp_monthly.py    # 분기 GDP → 월별 보간
 │   ├── preprocess.py         # Step 2 표준화
 │   ├── select_features.py    # Step 3 상관/VIF/p-value + 계수 그래프
@@ -85,3 +85,9 @@ python forecast.py
 ## 기술 스택
 
 Python · pandas · statsmodels · scikit-learn · Prophet · matplotlib · requests
+
+## 데이터 출처 및 라이선스
+
+- 경제지표: 한국은행 경제통계시스템(ECOS), 통계청 국가통계포털(KOSIS) 공개 통계 — 출처를 표기해 사용했습니다.
+- KOSPI: `src/collect/kospi.py`로 수집해 **월평균 지수로만 가공**해 사용했으며(`data/raw/kospi.csv`), 일별 원본 데이터는 저장소에 포함하지 않습니다.
+- 코드: 팀 프로젝트 결과물로, 저작권은 팀원 공동에게 있습니다. 포트폴리오 열람 목적으로 공개하며 별도의 사용 허가는 부여하지 않습니다.
