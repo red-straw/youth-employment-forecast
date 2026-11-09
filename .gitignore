@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+venv/
+.idea/
+data/standardized_dataset.csv
+.DS_Store
