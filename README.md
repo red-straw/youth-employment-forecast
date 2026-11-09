@@ -2,7 +2,7 @@
 
 거시 경제지표로 **20대 청년 고용률의 결정 요인을 찾고**, Prophet 하이브리드 모델로 **2025년 고용률을 백테스트**한 데이터 분석 프로젝트입니다.
 
-`25-2` · 팀 프로젝트
+`25-2` · 개인 프로젝트
 
 ![forecast](results/figures/forecast_2025_zoom.png)
 
@@ -90,4 +90,4 @@ Python · pandas · statsmodels · scikit-learn · Prophet · matplotlib · requ
 
 - 경제지표: 한국은행 경제통계시스템(ECOS), 통계청 국가통계포털(KOSIS) 공개 통계 — 출처를 표기해 사용했습니다.
 - KOSPI: `src/collect/kospi.py`로 수집해 **월평균 지수로만 가공**해 사용했으며(`data/raw/kospi.csv`), 일별 원본 데이터는 저장소에 포함하지 않습니다.
-- 코드: 팀 프로젝트 결과물로, 저작권은 팀원 공동에게 있습니다. 포트폴리오 열람 목적으로 공개하며 별도의 사용 허가는 부여하지 않습니다.
+- 코드: [MIT](LICENSE)
